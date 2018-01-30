@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2D72FD22020CC2C0099D9CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D72FD12020CC2C0099D9CC /* AppDelegate.m */; };
+		E2D72FD52020CC2C0099D9CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D72FD42020CC2C0099D9CC /* ViewController.m */; };
+		E2D72FD82020CC2C0099D9CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D72FD62020CC2C0099D9CC /* Main.storyboard */; };
+		E2D72FDA2020CC2C0099D9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D72FD92020CC2C0099D9CC /* Assets.xcassets */; };
+		E2D72FDD2020CC2C0099D9CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D72FDB2020CC2C0099D9CC /* LaunchScreen.storyboard */; };
+		E2D72FE02020CC2C0099D9CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D72FDF2020CC2C0099D9CC /* main.m */; };
+		E2D72FEC2020CC4B0099D9CC /* AnnecyMediaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D72FEB2020CC3F0099D9CC /* AnnecyMediaSDK.framework */; };
+		E2D72FED2020CC4B0099D9CC /* AnnecyMediaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2D72FEB2020CC3F0099D9CC /* AnnecyMediaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2D72FEA2020CC3F0099D9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D72FE62020CC3F0099D9CC /* AnnecyMediaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E220C5F02020A2EC003DBEE5;
+			remoteInfo = AnnecyMediaSDK;
+		};
+		E2D72FEE2020CC4B0099D9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D72FE62020CC3F0099D9CC /* AnnecyMediaSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E220C5EF2020A2EC003DBEE5;
+			remoteInfo = AnnecyMediaSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2D72FF02020CC4B0099D9CC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E2D72FED2020CC4B0099D9CC /* AnnecyMediaSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E2D72FCD2020CC2C0099D9CC /* DebugProjectObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebugProjectObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D72FD02020CC2C0099D9CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2D72FD12020CC2C0099D9CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2D72FD32020CC2C0099D9CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2D72FD42020CC2C0099D9CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2D72FD72020CC2C0099D9CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2D72FD92020CC2C0099D9CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2D72FDC2020CC2C0099D9CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2D72FDE2020CC2C0099D9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D72FDF2020CC2C0099D9CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2D72FE62020CC3F0099D9CC /* AnnecyMediaSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnnecyMediaSDK.xcodeproj; path = ../../AnnecyMediaSDK/AnnecyMediaSDK.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2D72FCA2020CC2C0099D9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D72FEC2020CC4B0099D9CC /* AnnecyMediaSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2D72FC42020CC2C0099D9CC = {
+			isa = PBXGroup;
+			children = (
+				E2D72FE62020CC3F0099D9CC /* AnnecyMediaSDK.xcodeproj */,
+				E2D72FCF2020CC2C0099D9CC /* DebugProjectObjC */,
+				E2D72FCE2020CC2C0099D9CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2D72FCE2020CC2C0099D9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2D72FCD2020CC2C0099D9CC /* DebugProjectObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2D72FCF2020CC2C0099D9CC /* DebugProjectObjC */ = {
+			isa = PBXGroup;
+			children = (
+				E2D72FD02020CC2C0099D9CC /* AppDelegate.h */,
+				E2D72FD12020CC2C0099D9CC /* AppDelegate.m */,
+				E2D72FD32020CC2C0099D9CC /* ViewController.h */,
+				E2D72FD42020CC2C0099D9CC /* ViewController.m */,
+				E2D72FD62020CC2C0099D9CC /* Main.storyboard */,
+				E2D72FD92020CC2C0099D9CC /* Assets.xcassets */,
+				E2D72FDB2020CC2C0099D9CC /* LaunchScreen.storyboard */,
+				E2D72FDE2020CC2C0099D9CC /* Info.plist */,
+				E2D72FDF2020CC2C0099D9CC /* main.m */,
+			);
+			path = DebugProjectObjC;
+			sourceTree = "<group>";
+		};
+		E2D72FE72020CC3F0099D9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2D72FEB2020CC3F0099D9CC /* AnnecyMediaSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2D72FCC2020CC2C0099D9CC /* DebugProjectObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D72FE32020CC2C0099D9CC /* Build configuration list for PBXNativeTarget "DebugProjectObjC" */;
+			buildPhases = (
+				E2D72FC92020CC2C0099D9CC /* Sources */,
+				E2D72FCA2020CC2C0099D9CC /* Frameworks */,
+				E2D72FCB2020CC2C0099D9CC /* Resources */,
+				E2D72FF02020CC4B0099D9CC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2D72FEF2020CC4B0099D9CC /* PBXTargetDependency */,
+			);
+			name = DebugProjectObjC;
+			productName = DebugProjectObjC;
+			productReference = E2D72FCD2020CC2C0099D9CC /* DebugProjectObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2D72FC52020CC2C0099D9CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "GD Mobile GmbH";
+				TargetAttributes = {
+					E2D72FCC2020CC2C0099D9CC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E2D72FC82020CC2C0099D9CC /* Build configuration list for PBXProject "DebugProjectObjC" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2D72FC42020CC2C0099D9CC;
+			productRefGroup = E2D72FCE2020CC2C0099D9CC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E2D72FE72020CC3F0099D9CC /* Products */;
+					ProjectRef = E2D72FE62020CC3F0099D9CC /* AnnecyMediaSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E2D72FCC2020CC2C0099D9CC /* DebugProjectObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E2D72FEB2020CC3F0099D9CC /* AnnecyMediaSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AnnecyMediaSDK.framework;
+			remoteRef = E2D72FEA2020CC3F0099D9CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2D72FCB2020CC2C0099D9CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D72FDD2020CC2C0099D9CC /* LaunchScreen.storyboard in Resources */,
+				E2D72FDA2020CC2C0099D9CC /* Assets.xcassets in Resources */,
+				E2D72FD82020CC2C0099D9CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2D72FC92020CC2C0099D9CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D72FD52020CC2C0099D9CC /* ViewController.m in Sources */,
+				E2D72FE02020CC2C0099D9CC /* main.m in Sources */,
+				E2D72FD22020CC2C0099D9CC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2D72FEF2020CC4B0099D9CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnnecyMediaSDK;
+			targetProxy = E2D72FEE2020CC4B0099D9CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2D72FD62020CC2C0099D9CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2D72FD72020CC2C0099D9CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2D72FDB2020CC2C0099D9CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2D72FDC2020CC2C0099D9CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2D72FE12020CC2C0099D9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E2D72FE22020CC2C0099D9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2D72FE42020CC2C0099D9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DebugProjectObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = media.annecy.DebugProjectObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2D72FE52020CC2C0099D9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DebugProjectObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = media.annecy.DebugProjectObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2D72FC82020CC2C0099D9CC /* Build configuration list for PBXProject "DebugProjectObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D72FE12020CC2C0099D9CC /* Debug */,
+				E2D72FE22020CC2C0099D9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2D72FE32020CC2C0099D9CC /* Build configuration list for PBXNativeTarget "DebugProjectObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D72FE42020CC2C0099D9CC /* Debug */,
+				E2D72FE52020CC2C0099D9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2D72FC52020CC2C0099D9CC /* Project object */;
+}
