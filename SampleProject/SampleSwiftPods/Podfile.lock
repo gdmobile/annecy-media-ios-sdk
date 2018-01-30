@@ -1,0 +1,16 @@
+PODS:
+  - AnnecyMediaSDK (0.0.1)
+
+DEPENDENCIES:
+  - AnnecyMediaSDK (from `../../`)
+
+EXTERNAL SOURCES:
+  AnnecyMediaSDK:
+    :path: ../../
+
+SPEC CHECKSUMS:
+  AnnecyMediaSDK: f1ac723898a99239b84467f098a5616077fc9280
+
+PODFILE CHECKSUM: b3dab72585d54d2fd5cb2c9885325aeefcc8db8b
+
+COCOAPODS: 1.4.0
