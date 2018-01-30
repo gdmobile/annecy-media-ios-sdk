@@ -93,8 +93,6 @@ public class AMSDKViewController: UIViewController, UIWebViewDelegate {
     }
     
     /// Modal presentation style.
-    ///
-    /// - Parameter modalPresentationStyle: Modal presentation style.
     public override var modalPresentationStyle: UIModalPresentationStyle {
         get {return .fullScreen}
         set {}
