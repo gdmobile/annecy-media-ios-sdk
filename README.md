@@ -129,7 +129,7 @@ Mandatory callbacks:
 func annecyOnOfferwallReady(viewController: AMSDKViewController) {}
 ```
 
-Optionals callbacks:
+Optional callbacks:
 ``` swift
 func annecyDidRequestOfferwall() {}
 func annecyDidShowOfferwall() {}
