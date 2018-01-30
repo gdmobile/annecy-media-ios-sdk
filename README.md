@@ -29,7 +29,7 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 $ gem install cocoapods
 ```
 
-Integrate Annecy Media SDK into your Xcode project using CocoaPods by creating a `Podfile` like this:
+Integrate Annecy Media SDK into your Xcode project by creating a `Podfile` like this:
 
 
 ``` ruby
@@ -39,7 +39,7 @@ target '<Your Target Name>' do
 end
 ```
 
-Install Annecy Media SDK by running this command in your Terminal, in the root directory of your project:
+Install Annecy Media SDK by running this command in the root directory of your project:
 
 ```bash
 $ pod install
@@ -73,7 +73,6 @@ class ViewController: UIViewController, AMSDKDelegate {
         super.didReceiveMemoryWarning()
     }
 }
-
 ```
 
 ### Delegate Functions
