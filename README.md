@@ -2,24 +2,23 @@
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
-## Prerequisites
+## Checklist
 
-* You need an Annecy Media account and token
-	* [Register](https://admin.annecy.media/getting-started) or [Login](https://admin.annecy.media/login)
+* You have an Annecy Media account and token
+    * [Register](https://admin.annecy.media/getting-started) or [Login](https://admin.annecy.media/login)
     * Create a **Token** in your [Publisher Settings](https://admin.annecy.media/publishers)
-* Your target has to be at least **iOS 8.0**
+* Your deployment target is at least **iOS 8.0**
 
 ## Sample
 
 * Swift
-	* [CocoaPods](https://github.com/gdmobile/annecy-media-ios-sdk/tree/master/SampleProject/SampleSwiftPods)
-	* *Carthage (coming in February 2018)*
+    * [CocoaPods](https://github.com/gdmobile/annecy-media-ios-sdk/tree/master/SampleProject/SampleSwiftPods)
+    * *Carthage (coming in February 2018)*
 * Objective-C
-	* *CocoaPods (coming in February 2018)*
-	* *Carthage (coming in February 2018)*
+    * [CocoaPods](https://github.com/gdmobile/annecy-media-ios-sdk/tree/master/SampleProject/SampleObjCPods)
+    * *Carthage (coming in February 2018)*
 
 ## Installation
-
 
 ### CocoaPods
 
@@ -34,7 +33,7 @@ Integrate Annecy Media SDK into your Xcode project by creating a `Podfile` like 
 
 ``` ruby
 target '<Your Target Name>' do
-	use_frameworks!
+    use_frameworks!
     pod 'AnnecyMediaSDK', :git => 'https://github.com/gdmobile/annecy-media-ios-sdk.git'
 end
 ```
@@ -73,6 +72,54 @@ class ViewController: UIViewController, AMSDKDelegate {
         super.didReceiveMemoryWarning()
     }
 }
+```
+
+### Objective-C
+
+This is how your `ViewController.h` could look like:
+
+``` objective-c
+#import <UIKit/UIKit.h>
+#import <AnnecyMediaSDK/AnnecyMediaSDK-Swift.h>
+
+@interface ViewController: UIViewController<AMSDKDelegate>
+
+@end
+```
+
+And this is how your `ViewController.m` could look like:
+
+``` objective-c
+#import "ViewController.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+AnnecyMediaSDK* annecyMediaSDK;
+NSString* TOKEN = @"6ce0bbf0-2dc8-4d7c-a497-e93105188ba1";
+NSString* USER_ID = @"foo";
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    annecyMediaSDK = AnnecyMediaSDK.instance;
+    annecyMediaSDK.delegate = self;
+    [annecyMediaSDK setOptionsWithToken:TOKEN userId:USER_ID];
+    [annecyMediaSDK requestOfferwall];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+- (void)annecyOnOfferwallReadyWithViewController:(AMSDKViewController * _Nonnull)viewController {
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+@end
 ```
 
 ### Delegate Functions
