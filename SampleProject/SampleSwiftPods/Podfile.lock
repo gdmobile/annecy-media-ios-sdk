@@ -2,15 +2,20 @@ PODS:
   - AnnecyMediaSDK (0.0.1)
 
 DEPENDENCIES:
-  - AnnecyMediaSDK (from `../../`)
+  - AnnecyMediaSDK (from `https://github.com/gdmobile/annecy-media-ios-sdk.git`)
 
 EXTERNAL SOURCES:
   AnnecyMediaSDK:
-    :path: ../../
+    :git: https://github.com/gdmobile/annecy-media-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  AnnecyMediaSDK:
+    :commit: db70629921671c98b1ae29ece7f13cec209443a3
+    :git: https://github.com/gdmobile/annecy-media-ios-sdk.git
 
 SPEC CHECKSUMS:
-  AnnecyMediaSDK: f1ac723898a99239b84467f098a5616077fc9280
+  AnnecyMediaSDK: 88803392ae0563965fa6da105594c5faabd3dbb3
 
-PODFILE CHECKSUM: b3dab72585d54d2fd5cb2c9885325aeefcc8db8b
+PODFILE CHECKSUM: 7c8deeda5ab493ebae9cabd6d9de93fbbc49fe95
 
 COCOAPODS: 1.4.0
