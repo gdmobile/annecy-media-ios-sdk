@@ -11,7 +11,9 @@ import Foundation
 public class AnnecyMediaSDK: NSObject {
     fileprivate let viewController: AMSDKViewController
     
+    @objc
     public weak var delegate: AMSDKDelegate?
+    
     public var options: AMSDKOptions
     
     @objc
@@ -24,7 +26,18 @@ public class AnnecyMediaSDK: NSObject {
         super.init()
     }
     
+    /// Set Token.
+    ///
+    /// - Parameter token: Annecy Media API token.
+    /// - Parameter userId: Custom publisher user ID.
+    @objc
+    public func setOptions(token: String, userId: String) {
+        options.token = token
+        options.userId = userId
+    }
+    
     /// Request Annecy Media offerwall.
+    @objc
     public func requestOfferwall() {
         viewController.requestOfferwall()
     }
