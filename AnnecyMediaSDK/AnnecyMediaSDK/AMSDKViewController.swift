@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import AdSupport
 
-public class AMSDKViewController: UIViewController {
+public class AMSDKViewController: UIViewController, UIWebViewDelegate {
     
+    /// Initialize Annecy View Controller.
     public init() {
         super.init(nibName: nil, bundle: nil)
         
@@ -18,14 +20,64 @@ public class AMSDKViewController: UIViewController {
         self.modalTransitionStyle = .coverVertical
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    /// Request offerwall.
+    internal func requestOfferwall() {
+        let frame = CGRect(
+            x: 0,
+            y: 0,
+            width: UIScreen.main.bounds.width,
+            height: UIScreen.main.bounds.height
+        )
+        
+        let offerwallWebVew: UIWebView = UIWebView(frame: frame)
+        self.view.addSubview(offerwallWebVew)
+        offerwallWebVew.delegate = self
+        
+        if let offerwallURL = AnnecyMediaSDK.instance.options.offerwallUrl {
+            let offerwallURLRequest:URLRequest = URLRequest(url: offerwallURL)
+            offerwallWebVew.loadRequest(offerwallURLRequest)
+        }
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:)")
+    }
+    
+    /// Offerwall is ready.
+    public func webViewDidFinishLoad(_ webView: UIWebView) {
+        AnnecyMediaSDK.instance.delegate?.annecyOnOfferwallReady(viewController: self)
+    }
+    
+    /// Offerwall is loading.
+    public func webViewDidStartLoad(_ webView: UIWebView) {
+        AnnecyMediaSDK.instance.delegate?.annecyDidRequestOfferwall?()
+    }
+    
+    /// Offerwall failed loading.
+    public func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        AnnecyMediaSDK.instance.delegate?.annecyOnOfferwallFailed?(error: error)
+    }
+    
+    /// Detect click in offerwall.
+    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        
+        if navigationType == .linkClicked {
+            if let url = request.url {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+            
+            return false
+        }
+        
+        return true
     }
     
     /// Annecy did appear.
     ///
     /// - Parameter animated: Is animated.
-    open override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         AnnecyMediaSDK.instance.delegate?.annecyDidShowOfferwall?()
         
         super.viewDidAppear(animated)
@@ -34,7 +86,7 @@ public class AMSDKViewController: UIViewController {
     /// Annecy did disappear.
     ///
     /// - Parameter animated: Is animated.
-    open override func viewDidDisappear(_ animated: Bool) {
+    public override func viewDidDisappear(_ animated: Bool) {
         AnnecyMediaSDK.instance.delegate?.annecyDidDismissOfferwall?()
         
         super.viewDidAppear(animated)
@@ -43,7 +95,7 @@ public class AMSDKViewController: UIViewController {
     /// Modal presentation style.
     ///
     /// - Parameter modalPresentationStyle: Modal presentation style.
-    override open var modalPresentationStyle: UIModalPresentationStyle {
+    public override var modalPresentationStyle: UIModalPresentationStyle {
         get {return .fullScreen}
         set {}
     }

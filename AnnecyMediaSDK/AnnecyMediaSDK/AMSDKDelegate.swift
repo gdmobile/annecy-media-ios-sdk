@@ -20,5 +20,6 @@ public protocol AMSDKDelegate: class {
     @objc optional func annecyDidShowOfferwall()
     /// The app dismissed an offerwall.
     @objc optional func annecyDidDismissOfferwall()
+    /// The app failed to request offerwall.
+    @objc optional func annecyOnOfferwallFailed(error: Error)
 }
-

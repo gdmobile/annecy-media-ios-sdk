@@ -26,7 +26,6 @@ public class AnnecyMediaSDK: NSObject {
     
     /// Request Annecy Media offerwall.
     public func requestOfferwall() {
-        AnnecyMediaSDK.instance.delegate?.annecyDidRequestOfferwall?()
+        viewController.requestOfferwall()
     }
 }
-
