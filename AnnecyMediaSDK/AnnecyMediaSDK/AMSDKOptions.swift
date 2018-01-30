@@ -10,6 +10,6 @@ import Foundation
 
 public class AMSDKOptions {
     
-    var token: String?
-    var userId: String?
+    public var token: String?
+    public var userId: String?
 }
