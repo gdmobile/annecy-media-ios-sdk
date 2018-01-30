@@ -4,6 +4,6 @@ target 'SampleSwiftPods' do
   use_frameworks!
 
   # Pods for SampleSwiftPods
-  pod 'AnnecyMediaSDK', :path => '../../'
+  pod 'AnnecyMediaSDK', :path => 'https://github.com/gdmobile/annecy-media-ios-sdk.git'
 
 end
