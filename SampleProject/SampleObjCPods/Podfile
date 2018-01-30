@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+
+target 'SampleObjCPods' do
+  use_frameworks!
+
+  # Pods for SampleObjCPods
+  pod 'AnnecyMediaSDK', :git => 'https://github.com/gdmobile/annecy-media-ios-sdk.git'
+
+end
