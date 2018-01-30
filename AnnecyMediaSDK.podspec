@@ -13,5 +13,6 @@ s.source = { :git => "https://github.com/gdmobile/annecy-media-ios-sdk.git", :ta
 s.frameworks = ['Foundation', 'UIKit', 'AdSupport']
 s.source_files = "AnnecyMediaSDK/AnnecyMediaSDK/**/*.{swift,h,m}"
 s.public_header_files = "AnnecyMediaSDK/AnnecyMediaSDK/**/*.h"
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
 
 end
