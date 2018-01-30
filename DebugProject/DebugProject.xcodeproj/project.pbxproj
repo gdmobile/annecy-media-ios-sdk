@@ -6,11 +6,51 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		E2D72FF62020CCD40099D9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D72FF12020CCD30099D9CC /* DebugProjectObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2D72FCD2020CC2C0099D9CC;
+			remoteInfo = DebugProjectObjC;
+		};
+		E2D72FFD2020CCD80099D9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D72FF82020CCD70099D9CC /* DebugProjectSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2D72FA42020CB780099D9CC;
+			remoteInfo = DebugProjectSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2D72FF12020CCD30099D9CC /* DebugProjectObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DebugProjectObjC.xcodeproj; path = DebugProjectObjC/DebugProjectObjC.xcodeproj; sourceTree = "<group>"; };
+		E2D72FF82020CCD70099D9CC /* DebugProjectSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DebugProjectSwift.xcodeproj; path = DebugProjectSwift/DebugProjectSwift.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		E2D72F942020CAE50099D9CC = {
 			isa = PBXGroup;
 			children = (
+				E2D72FF82020CCD70099D9CC /* DebugProjectSwift.xcodeproj */,
+				E2D72FF12020CCD30099D9CC /* DebugProjectObjC.xcodeproj */,
 			);
+			sourceTree = "<group>";
+		};
+		E2D72FF22020CCD30099D9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2D72FF72020CCD40099D9CC /* DebugProjectObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2D72FF92020CCD70099D9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2D72FFE2020CCD80099D9CC /* DebugProjectSwift.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -30,11 +70,38 @@
 			);
 			mainGroup = E2D72F942020CAE50099D9CC;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E2D72FF22020CCD30099D9CC /* Products */;
+					ProjectRef = E2D72FF12020CCD30099D9CC /* DebugProjectObjC.xcodeproj */;
+				},
+				{
+					ProductGroup = E2D72FF92020CCD70099D9CC /* Products */;
+					ProjectRef = E2D72FF82020CCD70099D9CC /* DebugProjectSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E2D72FF72020CCD40099D9CC /* DebugProjectObjC.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DebugProjectObjC.app;
+			remoteRef = E2D72FF62020CCD40099D9CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2D72FFE2020CCD80099D9CC /* DebugProjectSwift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DebugProjectSwift.app;
+			remoteRef = E2D72FFD2020CCD80099D9CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		E2D72F992020CAE50099D9CC /* Debug */ = {
