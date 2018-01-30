@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E220C5F52020A2EC003DBEE5 /* AnnecyMediaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E220C5F32020A2EC003DBEE5 /* AnnecyMediaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E220C5FC2020A3C2003DBEE5 /* AnnecyMediaSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220C5FB2020A3C2003DBEE5 /* AnnecyMediaSDK.swift */; };
+		E220C5FE2020A460003DBEE5 /* AMSDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220C5FD2020A460003DBEE5 /* AMSDKViewController.swift */; };
+		E220C6002020A620003DBEE5 /* AMSDKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220C5FF2020A620003DBEE5 /* AMSDKDelegate.swift */; };
+		E220C6022020A664003DBEE5 /* AMSDKOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220C6012020A664003DBEE5 /* AMSDKOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E220C5F02020A2EC003DBEE5 /* AnnecyMediaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnnecyMediaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E220C5F32020A2EC003DBEE5 /* AnnecyMediaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnecyMediaSDK.h; sourceTree = "<group>"; };
 		E220C5F42020A2EC003DBEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E220C5FB2020A3C2003DBEE5 /* AnnecyMediaSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnecyMediaSDK.swift; sourceTree = "<group>"; };
+		E220C5FD2020A460003DBEE5 /* AMSDKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMSDKViewController.swift; sourceTree = "<group>"; };
+		E220C5FF2020A620003DBEE5 /* AMSDKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMSDKDelegate.swift; sourceTree = "<group>"; };
+		E220C6012020A664003DBEE5 /* AMSDKOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMSDKOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,10 @@
 			children = (
 				E220C5F32020A2EC003DBEE5 /* AnnecyMediaSDK.h */,
 				E220C5F42020A2EC003DBEE5 /* Info.plist */,
+				E220C5FB2020A3C2003DBEE5 /* AnnecyMediaSDK.swift */,
+				E220C5FD2020A460003DBEE5 /* AMSDKViewController.swift */,
+				E220C5FF2020A620003DBEE5 /* AMSDKDelegate.swift */,
+				E220C6012020A664003DBEE5 /* AMSDKOptions.swift */,
 			);
 			path = AnnecyMediaSDK;
 			sourceTree = "<group>";
@@ -95,6 +107,7 @@
 				TargetAttributes = {
 					E220C5EF2020A2EC003DBEE5 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E220C5FC2020A3C2003DBEE5 /* AnnecyMediaSDK.swift in Sources */,
+				E220C6022020A664003DBEE5 /* AMSDKOptions.swift in Sources */,
+				E220C5FE2020A460003DBEE5 /* AMSDKViewController.swift in Sources */,
+				E220C6002020A620003DBEE5 /* AMSDKDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +270,7 @@
 		E220C5F92020A2EC003DBEE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -265,6 +283,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = media.annecy.AnnecyMediaSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -273,6 +292,7 @@
 		E220C5FA2020A2EC003DBEE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
