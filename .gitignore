@@ -26,3 +26,8 @@ project.xcworkspace
 #
 Pods/
 Podfile.lock
+
+# Carthage
+#
+Carthage/
+Cartfile.resolved

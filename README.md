@@ -13,23 +13,22 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 * Swift
     * [CocoaPods](https://github.com/gdmobile/annecy-media-ios-sdk/tree/master/SampleProject/SampleSwiftPods)
-    * *Carthage (coming in February 2018)*
+    * [Carthage](https://github.com/gdmobile/annecy-media-ios-sdk/tree/master/SampleProject/SampleSwiftCarthage)
 * Objective-C
     * [CocoaPods](https://github.com/gdmobile/annecy-media-ios-sdk/tree/master/SampleProject/SampleObjCPods)
-    * *Carthage (coming in February 2018)*
+    * [Carthage](https://github.com/gdmobile/annecy-media-ios-sdk/tree/master/SampleProject/SampleObjCCarthage)
 
 ## Installation
 
 ### CocoaPods
 
-**CocoaPods** is a package manager for iOS projects. You can install it with this command in your Terminal:
+[CocoaPods](https://cocoapods.org) is a dependency manager for macOS and iOS. You can install it with [RubyGems](https://rubygems.org) like this:
 
 ``` bash
 $ gem install cocoapods
 ```
 
-Integrate Annecy Media SDK into your Xcode project by creating a `Podfile` like this:
-
+Create a `Podfile` like this:
 
 ``` ruby
 target '<Your Target Name>' do
@@ -38,10 +37,38 @@ target '<Your Target Name>' do
 end
 ```
 
-Install Annecy Media SDK by running this command in the root directory of your project:
+You can add a `tag` with the version you like to use like this:
+
+``` ruby
+pod 'AnnecyMediaSDK', :git => 'https://github.com/gdmobile/annecy-media-ios-sdk.git', :tag => '0.0.1'
+```
+
+Run this command in the root directory of your project:
 
 ```bash
 $ pod install
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager for macOS and iOS. You can install it with [Homebrew](https://brew.sh) like this:
+
+``` bash
+$ brew install carthage
+```
+
+Create a `Cartfile` like this:
+
+```
+github "gdmobile/annecy-media-docs" "master"
+```
+
+You can replace `master` by the version you like to use e.g. `0.0.1`.
+
+Run this command in the root directory of your project:
+
+``` bash
+$ carthage update
 ```
 
 ## Usage
