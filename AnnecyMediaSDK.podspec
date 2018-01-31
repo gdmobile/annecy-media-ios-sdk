@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 s.platform = :ios
 s.ios.deployment_target = '8.0'
 s.name = "AnnecyMediaSDK"
-s.version = "0.0.2"
+s.version = "0.0.3"
 s.summary = "Create your custom offerwalls with Annecy Media."
 s.description = "Annecy Media is an offerwall mediation tool. Create a custom offerwall for your app!"
 s.homepage = "https://www.annecy.media"
