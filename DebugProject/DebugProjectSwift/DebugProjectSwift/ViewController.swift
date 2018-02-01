@@ -35,6 +35,10 @@ class ViewController: UIViewController, AMSDKDelegate {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    func annecyOnCloseOfferwall(viewController: AMSDKViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

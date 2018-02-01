@@ -39,6 +39,28 @@ public class AMSDKViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
+    /// On user clicked inside the offerwall.
+    ///
+    /// - Parameter url: URL of the clicked link.
+    fileprivate func onOfferwallClicked(url: URL) {
+        if let hashIndex = url.absoluteString.index(of: "#") {
+            let hash = url.absoluteString[hashIndex...]
+            if (hash == "#annecy-back") {
+                AnnecyMediaSDK.instance.delegate?.annecyOnCloseOfferwall?(viewController: self)
+                
+                return
+            }
+        }
+        
+        if UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:)")
     }
@@ -63,13 +85,7 @@ public class AMSDKViewController: UIViewController, UIWebViewDelegate {
         
         if navigationType == .linkClicked {
             if let url = request.url {
-                if UIApplication.shared.canOpenURL(url) {
-                    if #available(iOS 10.0, *) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    } else {
-                        UIApplication.shared.openURL(url)
-                    }
-                }
+                onOfferwallClicked(url: url)
             }
             
             return false

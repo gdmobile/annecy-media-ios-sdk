@@ -23,7 +23,9 @@ NSString* USER_ID = @"foo";
     
     annecyMediaSDK = AnnecyMediaSDK.instance;
     annecyMediaSDK.delegate = self;
-    [annecyMediaSDK setOptionsWithToken:TOKEN userId:USER_ID];
+    [annecyMediaSDK setToken:TOKEN];
+    [annecyMediaSDK setUserId:USER_ID];
+    [annecyMediaSDK setIsHeaderEnabled:YES];
     [annecyMediaSDK requestOfferwall];
 }
 
@@ -33,6 +35,10 @@ NSString* USER_ID = @"foo";
 
 - (void)annecyOnOfferwallReadyWithViewController:(AMSDKViewController * _Nonnull)viewController {
     [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (void)annecyOnCloseOfferwallWithViewController:(AMSDKViewController *)viewController {
+    [viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

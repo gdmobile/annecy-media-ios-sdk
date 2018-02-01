@@ -88,11 +88,16 @@ class ViewController: UIViewController, AMSDKDelegate {
         AnnecyMediaSDK.instance.delegate = self
         AnnecyMediaSDK.instance.options.token = "6ce0bbf0-2dc8-4d7c-a497-e93105188ba1"
         AnnecyMediaSDK.instance.options.userId = "foo"
+        AnnecyMediaSDK.instance.options.isHeaderEnabled = true
         AnnecyMediaSDK.instance.requestOfferwall()
     }
 
     func annecyOnOfferwallReady(viewController: AMSDKViewController) {
         self.present(viewController, animated: true, completion: nil)
+    }
+
+    func annecyOnCloseOfferwall(viewController: AMSDKViewController) {
+        viewController.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -134,7 +139,9 @@ NSString* USER_ID = @"foo";
 
     annecyMediaSDK = AnnecyMediaSDK.instance;
     annecyMediaSDK.delegate = self;
-    [annecyMediaSDK setOptionsWithToken:TOKEN userId:USER_ID];
+    [annecyMediaSDK setToken:TOKEN];
+    [annecyMediaSDK setUserId:USER_ID];
+    [annecyMediaSDK setIsHeaderEnabled:YES];
     [annecyMediaSDK requestOfferwall];
 }
 
@@ -146,10 +153,29 @@ NSString* USER_ID = @"foo";
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
+- (void)annecyOnCloseOfferwallWithViewController:(AMSDKViewController *)viewController {
+    [viewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
 ```
 
-### Delegate Functions
+## Options
+
+| Option                      | Type     | Example |
+| --------------------------- | -------- | ------- |
+| token                       | `String` | `6ce0bbf0-2dc8-4d7c-a497-e93105188ba1` |
+| userId                      | `String` | `foo` |
+| buttonBackgroundColor       | `String` | `F00` |
+| buttonTextColor             | `String` | `F00` |
+| isHeaderEnabled             | `Bool`   | `true` |
+| headline                    | `String` | `F00` |
+| headerBackgroundColor       | `String` | `F00` |
+| headerTextColor             | `String` | `F00` |
+| headerButtonBackgroundColor | `String` | `F00` |
+| headerButtonTextColor       | `String` | `F00` |
+
+## Delegate Functions
 
 Mandatory callbacks:
 ``` swift
@@ -161,5 +187,6 @@ Optional callbacks:
 func annecyDidRequestOfferwall() {}
 func annecyDidShowOfferwall() {}
 func annecyDidDismissOfferwall() {}
+func annecyOnCloseOfferwall(viewController: AMSDKViewController) {}
 func annecyOnOfferwallFailed(error: Error) {}
 ```

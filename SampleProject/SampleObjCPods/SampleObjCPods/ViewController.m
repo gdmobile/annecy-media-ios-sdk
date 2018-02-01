@@ -23,7 +23,8 @@ NSString* USER_ID = @"foo";
     
     annecyMediaSDK = AnnecyMediaSDK.instance;
     annecyMediaSDK.delegate = self;
-    [annecyMediaSDK setOptionsWithToken:TOKEN userId:USER_ID];
+    [annecyMediaSDK setToken:TOKEN];
+    [annecyMediaSDK setUserId:USER_ID];
     [annecyMediaSDK requestOfferwall];
 }
 
