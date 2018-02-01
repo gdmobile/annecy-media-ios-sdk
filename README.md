@@ -164,16 +164,16 @@ NSString* USER_ID = @"foo";
 
 | Option                      | Type     | Example |
 | --------------------------- | -------- | ------- |
-| token                       | `String` | `6ce0bbf0-2dc8-4d7c-a497-e93105188ba1` |
-| userId                      | `String` | `foo` |
-| buttonBackgroundColor       | `String` | `F00` |
-| buttonTextColor             | `String` | `F00` |
+| token                       | `String` | `"6ce0bbf0-2dc8-4d7c-a497-e93105188ba1"` |
+| userId                      | `String` | `"foo"` |
+| buttonBackgroundColor       | `String` | `"F00"` |
+| buttonTextColor             | `String` | `"F00"` |
 | isHeaderEnabled             | `Bool`   | `true` |
-| headline                    | `String` | `Your Offerwall` |
-| headerBackgroundColor       | `String` | `F00` |
-| headerTextColor             | `String` | `F00` |
-| headerButtonBackgroundColor | `String` | `F00` |
-| headerButtonTextColor       | `String` | `F00` |
+| headline                    | `String` | `"Your Offerwall"` |
+| headerBackgroundColor       | `String` | `"F00"` |
+| headerTextColor             | `String` | `"F00"` |
+| headerButtonBackgroundColor | `String` | `"F00"` |
+| headerButtonTextColor       | `String` | `"F00"` |
 
 ## Delegate Functions
 
