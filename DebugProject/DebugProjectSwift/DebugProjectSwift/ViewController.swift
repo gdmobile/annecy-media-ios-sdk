@@ -17,6 +17,17 @@ class ViewController: UIViewController, AMSDKDelegate {
         AnnecyMediaSDK.instance.delegate = self
         AnnecyMediaSDK.instance.options.token = "6ce0bbf0-2dc8-4d7c-a497-e93105188ba1"
         AnnecyMediaSDK.instance.options.userId = "foo"
+        
+        // Optinal options
+        AnnecyMediaSDK.instance.options.buttonBackgroundColor = "FCD"
+        AnnecyMediaSDK.instance.options.buttonTextColor = "000"
+        AnnecyMediaSDK.instance.options.isHeaderEnabled = true
+        AnnecyMediaSDK.instance.options.headline = "Your Offerwall"
+        AnnecyMediaSDK.instance.options.headerBackgroundColor = "DCF"
+        AnnecyMediaSDK.instance.options.headerTextColor = "333"
+        AnnecyMediaSDK.instance.options.headerButtonBackgroundColor = "98C"
+        AnnecyMediaSDK.instance.options.headerButtonTextColor = "FFF"
+        
         AnnecyMediaSDK.instance.requestOfferwall()
     }
     

@@ -14,6 +14,15 @@ public class AMSDKOptions {
     public var token: String?
     public var userId: String?
     
+    public var buttonBackgroundColor: String?
+    public var buttonTextColor: String?
+    public var headline: String?
+    public var headerBackgroundColor: String?
+    public var headerTextColor: String?
+    public var headerButtonBackgroundColor: String?
+    public var headerButtonTextColor: String?
+    public var isHeaderEnabled: Bool = false
+    
     /// User country.
     internal var country: String? {
         get {
@@ -48,9 +57,30 @@ public class AMSDKOptions {
                 "&idfa_gaid=\(self.idfa ?? "")" +
                 "&token=\(self.token ?? "")" +
                 "&user_id=\(self.userId ?? "")" +
-                "&platform=ios"
+                "&platform=ios" +
+                "&btn_bg=\(self.buttonBackgroundColor ?? "")" +
+                "&btn_txt=\(self.buttonTextColor ?? "")" +
+                "&headline=\(self.getUrlEncoded(text: self.headline))" +
+                "&hdr=\(self.isHeaderEnabled ? "1" : "")" +
+                "&hdr_bg=\(self.headerBackgroundColor ?? "")" +
+                "&hdr_txt=\(self.headerTextColor ?? "")" +
+                "&hdr_btn_bg=\(self.headerButtonBackgroundColor ?? "")" +
+                "&hdr_btn_txt=\(self.headerButtonTextColor ?? "")"
             
             return URL(string: urlString)
         }
+    }
+    
+    /// Get URL encoded text.
+    ///
+    /// - Parameter text: Non encoded text.
+    fileprivate func getUrlEncoded(text: String?) -> String {
+        if (text != nil) {
+            if let encodedText = text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+                return encodedText
+            }
+        }
+    
+        return ""
     }
 }

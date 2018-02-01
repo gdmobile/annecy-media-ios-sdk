@@ -16,7 +16,7 @@ public class AMSDKViewController: UIViewController, UIWebViewDelegate {
     public init() {
         super.init(nibName: nil, bundle: nil)
         
-        self.view.backgroundColor = UIColor.gray
+        self.view.backgroundColor = UIColor.black
         self.modalTransitionStyle = .coverVertical
     }
     
