@@ -169,7 +169,7 @@ NSString* USER_ID = @"foo";
 | buttonBackgroundColor       | `String` | `F00` |
 | buttonTextColor             | `String` | `F00` |
 | isHeaderEnabled             | `Bool`   | `true` |
-| headline                    | `String` | `F00` |
+| headline                    | `String` | `Your Offerwall` |
 | headerBackgroundColor       | `String` | `F00` |
 | headerTextColor             | `String` | `F00` |
 | headerButtonBackgroundColor | `String` | `F00` |
