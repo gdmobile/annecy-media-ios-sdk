@@ -16,27 +16,30 @@ public class AMSDKViewController: UIViewController, UIWebViewDelegate {
     public init() {
         super.init(nibName: nil, bundle: nil)
         
-        self.view.backgroundColor = UIColor.black
+        self.view.backgroundColor = .white
         self.modalTransitionStyle = .coverVertical
     }
     
     /// Request offerwall.
     internal func requestOfferwall() {
-        let frame = CGRect(
-            x: 0,
-            y: 0,
-            width: UIScreen.main.bounds.width,
-            height: UIScreen.main.bounds.height
-        )
+        let offerwallWebView = UIWebView(frame: self.view.bounds)
         
-        let offerwallWebVew: UIWebView = UIWebView(frame: frame)
-        self.view.addSubview(offerwallWebVew)
-        offerwallWebVew.delegate = self
+        offerwallWebView.delegate = self
+        offerwallWebView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        offerwallWebView.isMultipleTouchEnabled = false
+        offerwallWebView.backgroundColor = .white
+        
+        if #available(iOS 9, *) {
+            offerwallWebView.allowsLinkPreview = false
+            offerwallWebView.allowsPictureInPictureMediaPlayback = false
+        }
         
         if let offerwallURL = AnnecyMediaSDK.instance.options.offerwallUrl {
             let offerwallURLRequest:URLRequest = URLRequest(url: offerwallURL)
-            offerwallWebVew.loadRequest(offerwallURLRequest)
+            offerwallWebView.loadRequest(offerwallURLRequest)
         }
+        
+        self.view.addSubview(offerwallWebView)
     }
     
     /// On user clicked inside the offerwall.

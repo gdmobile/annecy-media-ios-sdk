@@ -40,7 +40,7 @@ end
 You can add a `tag` with the version you like to use like this:
 
 ``` ruby
-pod 'AnnecyMediaSDK', :git => 'https://github.com/gdmobile/annecy-media-ios-sdk.git', :tag => '0.0.1'
+pod 'AnnecyMediaSDK', :git => 'https://github.com/gdmobile/annecy-media-ios-sdk.git', :tag => '1.0.0'
 ```
 
 Run this command in the root directory of your project:
@@ -63,7 +63,7 @@ Create a `Cartfile` like this:
 github "gdmobile/annecy-media-docs" "master"
 ```
 
-You can replace `master` by the version you like to use e.g. `0.0.1`.
+You can replace `master` by the version you like to use e.g. `1.0.0`.
 
 Run this command in the root directory of your project:
 
