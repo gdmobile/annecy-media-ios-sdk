@@ -12,6 +12,7 @@
 		E220C5FE2020A460003DBEE5 /* AMSDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220C5FD2020A460003DBEE5 /* AMSDKViewController.swift */; };
 		E220C6002020A620003DBEE5 /* AMSDKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220C5FF2020A620003DBEE5 /* AMSDKDelegate.swift */; };
 		E220C6022020A664003DBEE5 /* AMSDKOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220C6012020A664003DBEE5 /* AMSDKOptions.swift */; };
+		E2598B332029C55D00AE5ACF /* AMSDKHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2598B322029C55D00AE5ACF /* AMSDKHexColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E220C5FD2020A460003DBEE5 /* AMSDKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMSDKViewController.swift; sourceTree = "<group>"; };
 		E220C5FF2020A620003DBEE5 /* AMSDKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMSDKDelegate.swift; sourceTree = "<group>"; };
 		E220C6012020A664003DBEE5 /* AMSDKOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMSDKOptions.swift; sourceTree = "<group>"; };
+		E2598B322029C55D00AE5ACF /* AMSDKHexColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMSDKHexColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E220C5FD2020A460003DBEE5 /* AMSDKViewController.swift */,
 				E220C5FF2020A620003DBEE5 /* AMSDKDelegate.swift */,
 				E220C6012020A664003DBEE5 /* AMSDKOptions.swift */,
+				E2598B322029C55D00AE5ACF /* AMSDKHexColors.swift */,
 			);
 			path = AnnecyMediaSDK;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2598B332029C55D00AE5ACF /* AMSDKHexColors.swift in Sources */,
 				E220C5FC2020A3C2003DBEE5 /* AnnecyMediaSDK.swift in Sources */,
 				E220C6022020A664003DBEE5 /* AMSDKOptions.swift in Sources */,
 				E220C5FE2020A460003DBEE5 /* AMSDKViewController.swift in Sources */,

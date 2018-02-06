@@ -187,6 +187,8 @@ Optional callbacks:
 func annecyDidRequestOfferwall() {}
 func annecyDidShowOfferwall() {}
 func annecyDidDismissOfferwall() {}
+func annecyWillShowOfferwall() {}
+func annecyWillDismissOfferwall() {}
 func annecyOnCloseOfferwall(viewController: AMSDKViewController) {}
 func annecyOnOfferwallFailed(error: Error) {}
 ```

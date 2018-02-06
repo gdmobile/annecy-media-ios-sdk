@@ -17,7 +17,7 @@ public class AMSDKOptions {
     public var buttonBackgroundColor: String?
     public var buttonTextColor: String?
     public var headline: String?
-    public var headerBackgroundColor: String?
+    public var headerBackgroundColor: String = "5A6267"
     public var headerTextColor: String?
     public var headerButtonBackgroundColor: String?
     public var headerButtonTextColor: String?
@@ -62,7 +62,7 @@ public class AMSDKOptions {
                 "&btn_txt=\(self.buttonTextColor ?? "")" +
                 "&headline=\(self.getUrlEncoded(text: self.headline))" +
                 "&hdr=\(self.isHeaderEnabled ? "1" : "")" +
-                "&hdr_bg=\(self.headerBackgroundColor ?? "")" +
+                "&hdr_bg=\(self.headerBackgroundColor)" +
                 "&hdr_txt=\(self.headerTextColor ?? "")" +
                 "&hdr_btn_bg=\(self.headerButtonBackgroundColor ?? "")" +
                 "&hdr_btn_txt=\(self.headerButtonTextColor ?? "")"

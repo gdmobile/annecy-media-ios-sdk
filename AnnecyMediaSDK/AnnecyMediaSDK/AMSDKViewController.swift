@@ -39,6 +39,10 @@ public class AMSDKViewController: UIViewController, UIWebViewDelegate {
             offerwallWebView.loadRequest(offerwallURLRequest)
         }
         
+        if let backgroundColor = UIColor(hexString: AnnecyMediaSDK.instance.options.headerBackgroundColor) {
+            offerwallWebView.backgroundColor = backgroundColor
+        }
+        
         self.view.addSubview(offerwallWebView)
     }
     
@@ -101,18 +105,43 @@ public class AMSDKViewController: UIViewController, UIWebViewDelegate {
     ///
     /// - Parameter animated: Is animated.
     public override func viewDidAppear(_ animated: Bool) {
-        AnnecyMediaSDK.instance.delegate?.annecyDidShowOfferwall?()
-        
         super.viewDidAppear(animated)
+        AnnecyMediaSDK.instance.delegate?.annecyDidShowOfferwall?()
+    }
+    
+    /// Annecy will disappear.
+    ///
+    /// - Parameter animated: Is animated.
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AnnecyMediaSDK.instance.delegate?.annecyWillDismissOfferwall?()
+    }
+    
+    /// Annecy will appear.
+    ///
+    /// - Parameter animated: Is animated.
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AnnecyMediaSDK.instance.delegate?.annecyWillShowOfferwall?()
     }
     
     /// Annecy did disappear.
     ///
     /// - Parameter animated: Is animated.
     public override func viewDidDisappear(_ animated: Bool) {
-        AnnecyMediaSDK.instance.delegate?.annecyDidDismissOfferwall?()
-        
         super.viewDidAppear(animated)
+        AnnecyMediaSDK.instance.delegate?.annecyDidDismissOfferwall?()
+    }
+    
+    /// Prefers status bar hidden.
+    public override var prefersStatusBarHidden: Bool {
+        if #available(iOS 11.0, *) {
+            if (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0 > 0) {
+                return false
+            }
+        }
+        
+        return true
     }
     
     /// Modal presentation style.
