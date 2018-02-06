@@ -1,5 +1,8 @@
 # Annecy Media iOS SDK
 
+[![Version](https://img.shields.io/badge/Version-1.0.1-green.svg)](https://github.com/gdmobile/annecy-media-ios-sdk/releases)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://raw.githubusercontent.com/gdmobile/annecy-media-ios-sdk/master/LICENSE)
+
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
 ## Checklist
@@ -40,7 +43,7 @@ end
 You can add a `tag` with the version you like to use like this:
 
 ``` ruby
-pod 'AnnecyMediaSDK', :git => 'https://github.com/gdmobile/annecy-media-ios-sdk.git', :tag => '1.0.0'
+pod 'AnnecyMediaSDK', :git => 'https://github.com/gdmobile/annecy-media-ios-sdk.git', :tag => '1.0.1'
 ```
 
 Run this command in the root directory of your project:
@@ -63,7 +66,7 @@ Create a `Cartfile` like this:
 github "gdmobile/annecy-media-docs" "master"
 ```
 
-You can replace `master` by the version you like to use e.g. `1.0.0`.
+You can replace `master` by the version you like to use e.g. `1.0.1`.
 
 Run this command in the root directory of your project:
 
